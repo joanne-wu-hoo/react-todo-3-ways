@@ -19,15 +19,18 @@ class NewTodoForm extends Component {
       content: this.state.task
     };
     this.props.add(newTodoObj);
+    // reset form
+    this.setState({task: ""})
   };
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className="mt-2" onSubmit={this.handleSubmit}>
         <div className="input-group">
           <input
             type="text"
             name="task"
+            placeholder="Add a new todo"
             className="form-control"
             value={this.state.task}
             onChange={this.handleChange}

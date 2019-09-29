@@ -55,10 +55,7 @@ class TodoList extends Component {
       <div className="container mt-5">
         <h1>To-dos</h1>
         <div>{todos}</div>
-        <div className="container mt-5">
-          <h3>Add a new to-do</h3>
-          <NewTodoForm add={this.addTodo} />
-        </div>
+        <NewTodoForm add={this.addTodo} />
       </div>
     );
   }

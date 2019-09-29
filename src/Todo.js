@@ -6,6 +6,10 @@ class Todo extends Component{
     editing: false
   }
 
+  shouldComponentUpdate(nextProps, nextState){
+    return (this.state !== nextState);
+  }
+
   handleChange = (evt) => {
     this.setState({
       [evt.target.name]: evt.target.value
@@ -30,6 +34,7 @@ class Todo extends Component{
   }
 
   render(){
+    // console.log(`Todo ${this.props.id} re-rendered`);
     return(
       <div id={this.props.id}>
         <form onSubmit={this.handleEdit}>
