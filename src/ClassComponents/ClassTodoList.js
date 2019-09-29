@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import NewTodoForm from "./NewTodoForm";
 import Todo from "./Todo";
 
-class TodoList extends Component {
+class ClassTodoList extends Component {
   state = {
     todos: [
       {
@@ -53,7 +53,7 @@ class TodoList extends Component {
 
     return (
       <div className="container mt-5">
-        <h1>To-dos</h1>
+        <h4>To-dos</h4>
         <div>{todos}</div>
         <NewTodoForm add={this.addTodo} />
       </div>
@@ -61,4 +61,4 @@ class TodoList extends Component {
   }
 }
 
-export default TodoList;
+export default ClassTodoList;
