@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class Todo extends Component{
+class ClassTodo extends Component{
   state = {
     content: this.props.content,
     editing: false
@@ -60,4 +60,4 @@ class Todo extends Component{
   }
 }
 
-export default Todo;
+export default ClassTodo;

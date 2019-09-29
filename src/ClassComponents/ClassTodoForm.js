@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import uuid from "uuid/v4";
 
-class NewTodoForm extends Component {
+class ClassTodoForm extends Component {
   state = {
     task: ""
   };
@@ -50,4 +50,4 @@ class NewTodoForm extends Component {
   }
 }
 
-export default NewTodoForm;
+export default ClassTodoForm;

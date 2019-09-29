@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import NewTodoForm from "./NewTodoForm";
-import Todo from "./Todo";
+import ClassTodoForm from "./ClassTodoForm";
+import ClassTodo from "./ClassTodo";
 
 class ClassTodoList extends Component {
   state = {
@@ -42,7 +42,7 @@ class ClassTodoList extends Component {
 
   render() {
     let todos = this.state.todos.map(t => (
-      <Todo
+      <ClassTodo
         key={t.id}
         id={t.id}
         content={t.content}
@@ -55,7 +55,7 @@ class ClassTodoList extends Component {
       <div className="container mt-5">
         <h4>To-dos</h4>
         <div>{todos}</div>
-        <NewTodoForm add={this.addTodo} />
+        <ClassTodoForm add={this.addTodo} />
       </div>
     );
   }
