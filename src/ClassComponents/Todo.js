@@ -38,22 +38,22 @@ class Todo extends Component{
     return(
       <div id={this.props.id}>
         <form onSubmit={this.handleEdit}>
-        <div className="input-group">
-          <input
-            type="text" 
-            name="content"
-            className={this.state.editing ? "form-control border-0 bg-light" : "form-control shadow-none border-0 bg-white"} 
-            readOnly={this.state.editing ? '' : "readonly"}
-            value={this.state.content}
-            onChange={this.handleChange}
-          />
-          <button className="border-0 bg-white box-shadow-none" onClick={()=>this.toggleEdit}>
-            <i className="fa fa-pencil text-primary box-shadow-none"></i>
-          </button>
-          <button className="border-0 bg-white shadow-none" onClick={this.handleDelete}>
-            <i class="fa fa-trash text-danger"></i>
-          </button>
-        </div>
+          <div className="input-group">
+            <input
+              type="text" 
+              name="content"
+              className={this.state.editing ? "form-control border-0 bg-light" : "form-control shadow-none border-0 bg-white"} 
+              readOnly={this.state.editing ? '' : "readonly"}
+              value={this.state.content}
+              onChange={this.handleChange}
+            />
+            <button className="border-0 bg-white box-shadow-none" onClick={()=>this.toggleEdit}>
+              <i className="fa fa-pencil text-primary box-shadow-none"></i>
+            </button>
+            <button className="border-0 bg-white shadow-none" onClick={this.handleDelete}>
+              <i class="fa fa-trash text-danger"></i>
+            </button>
+          </div>
         </form>
       </div>
     )

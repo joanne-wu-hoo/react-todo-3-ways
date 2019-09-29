@@ -22,7 +22,7 @@ function HookTodo({id,text,removeTodo, editTodo}){
         >
         </input>
         <button onClick={()=>setIsEditable(!isEditable)} className="border-0 bg-white box-shadow-none">
-          <i className="fa fa-pencil text-primary box-shadow-none"></i>
+          <i className="fa fa-pencil text-success box-shadow-none"></i>
         </button>
         <button onClick={()=>removeTodo(id)} className="border-0 bg-white shadow-none">
           <i class="fa fa-trash text-danger"></i>

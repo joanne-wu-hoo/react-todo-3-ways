@@ -14,16 +14,20 @@ function HookTodoForm({addTodo}){
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        className="input"
-        type="text"
-        name="value"
-        value={value}
-        placeholder="Add a new todo"
-        onChange={e => setValue(e.target.value)}
-      >
-      </input>
-      <button className="btn btn-success">Add</button>
+      <div className="input-group">
+        <input
+          type="text"
+          name="value"
+          value={value}
+          placeholder="Add a new todo"
+          className="form-control"
+          onChange={e => setValue(e.target.value)}
+        >
+        </input>
+        <span className="input-group-btn">
+          <button className="btn btn-success">Add!</button>
+        </span>
+      </div>
     </form>
   )
   
