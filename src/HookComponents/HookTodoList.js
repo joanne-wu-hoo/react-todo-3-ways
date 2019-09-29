@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import uuid from "uuid/v4";
 import HookTodo from './HookTodo';
-import Todo from '../ClassComponents/Todo';
-import { setState } from 'expect/build/jestMatchersObject';
 import HookTodoForm from './HookTodoForm';
 
 
@@ -23,8 +21,6 @@ function HookTodoList(){
     }
   ]);
 
-
-
   // addTodo
   const addTodo = text => {
     let newTodo = {
@@ -42,14 +38,14 @@ function HookTodoList(){
   }
 
   // editTodo
-  // const editTodo = (id, newContent) => {
-  //   let updatedTodos = todos.map(todo =>
-  //     todo.id === id 
-  //       ? {...todo, content: newContent}
-  //       : todo
-  //   )
-  //   setTodos(updatedTodos);
-  // }
+  const editTodo = (id, newContent) => {
+    let updatedTodos = todos.map(todo =>
+      todo.id === id 
+        ? {...todo, content: newContent}
+        : todo
+    )
+    setTodos(updatedTodos);
+  }
 
   // map through todos and create Todo components
   const allTodos = todos.map(todo => (
@@ -58,7 +54,7 @@ function HookTodoList(){
       id={todo.id}
       text={todo.content}
       removeTodo={removeTodo}
-      // editTodo={editTodo}
+      editTodo={editTodo}
     />
   ))
 

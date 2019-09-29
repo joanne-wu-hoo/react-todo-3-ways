@@ -5,7 +5,8 @@ function HookTodoForm({addTodo}){
 
   const handleSubmit = e => {
     e.preventDefault();
-    if (!value) return; // prevent empty submission
+    // prevent empty submission
+    if (!value) return; 
     addTodo(value);
     // reset form
     setValue("");

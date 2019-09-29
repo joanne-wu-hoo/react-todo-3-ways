@@ -14,11 +14,15 @@ class NewTodoForm extends Component {
 
   handleSubmit = (evt) => {
     evt.preventDefault();
+    // prevent empty submission
+    if (this.state.task==="") return;
+
     let newTodoObj = {
       id: uuid(),
       content: this.state.task
     };
     this.props.add(newTodoObj);
+    
     // reset form
     this.setState({task: ""})
   };
